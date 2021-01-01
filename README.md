@@ -7,3 +7,4 @@ Following the guidelines to create [smaller python docker images](https://python
 * [Jupyterlab](https://github.com/amalic/Jupyterlab)
 * [NLP Jupyterlab examples](https://github.com/edbullen/nltk/blob/master/tokenisation.ipynb)
 * [Create a Conda environment file](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#create-env-file-manually)
+* [Node Docker Multistage](https://codefresh.io/docker-tutorial/node_docker_multistage/)
