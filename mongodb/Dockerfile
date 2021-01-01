@@ -1,0 +1,1 @@
+FROM bitnami/mongodb:4.4.3-debian-10-r3

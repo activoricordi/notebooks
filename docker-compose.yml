@@ -1,0 +1,70 @@
+version: '3.8'
+
+networks:
+  notebooks_network:
+
+services:
+
+  jupyterlab:
+    container_name: jupyterlab
+    build: ./jupyterlab
+    ports:
+      - '8888:8888'
+    environment:
+      JUPYTER_ENABLE_LAB: 'yes'
+      VIRTUAL_ENV: '/opt/venv'
+    volumes:
+      - workspace:/opt/env/workspace
+    networks: 
+      - notebooks_network
+
+  mkdocks:
+    container_name: mkdocs
+    build: ./mkdocs
+    networks: 
+      - notebooks_network
+
+  mongodb:
+    container_name: mongodb
+    image: 'docker.io/bitnami/mongodb:4.4-debian-10'
+    ports:
+      - "27017:27017"
+    volumes:
+      - 'mongodb_data:/bitnami/mongodb'
+    networks:
+    - notebooks_network
+  
+  webserver:
+    container_name: nginx
+    build: ./nginx
+    ports:
+      - 8000:80
+    volumes:
+      - ./nginx/conf.d/:/etc/nginx/conf.d/
+    networks:
+    - notebooks_network
+
+volumes:
+  workspace:
+    driver: local
+    driver_opts:
+      o: bind
+      type: none
+      device: workspace
+
+  export:
+    driver: local
+    driver_opts:
+      o: bind
+      type: none
+      device: export
+
+  import:
+    driver: local
+    driver_opts:
+      o: bind
+      type: none
+      device: workspace
+
+  mongodb_data:
+    driver: local

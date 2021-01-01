@@ -1,0 +1,3 @@
+@jupyterlab/debugger
+@jupyter-widgets/jupyterlab-manager@2.0
+jupyterlab-plotly
