@@ -11,7 +11,7 @@
 
 ### Micromamba
 
-To build the python image, we used *micromamba*.
+To build the python image, we have used a package manager application called *micromamba*.
 
 *micromamba* is a tiny version of the *mamba package manager*. It is a pure C++ package with a separate command line interface. It can be used to bootstrap environments (as an alternative to miniconda), but it's currently experimental. The benefit is that it's very tiny and does not come with a default version of Python.
 
