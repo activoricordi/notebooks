@@ -146,6 +146,7 @@ To enable the ipympl backend, simply use the matplotlib Jupyter magic:
 <summary>
 <a class="btnfire small stroke"><em class="fas fa-chevron-circle-down"></em>&nbsp;&nbsp;Show Reference List</a>    
 </summary>
+
 * [Smaller Docker images with Conda](https://jcristharif.com/conda-docker-tips.html)
 * [Jupyterlab](https://github.com/amalic/Jupyterlab)
 * [NLP Jupyterlab examples](https://github.com/edbullen/nltk/blob/master/tokenisation.ipynb)
@@ -153,4 +154,5 @@ To enable the ipympl backend, simply use the matplotlib Jupyter magic:
 * [Node Docker Multistage](https://codefresh.io/docker-tutorial/node_docker_multistage/)
 * [How to write a great Dockerfile for Python apps](https://www.pybootcamp.com/blog/how-to-write-dockerfile-python-apps/)
 * [Docker Buildkit](https://pythonspeed.com/articles/docker-buildkit/)
+
 </details>
